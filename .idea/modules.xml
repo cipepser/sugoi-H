@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/haskell-hello.iml" filepath="$PROJECT_DIR$/.idea/haskell-hello.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/sugoi-H.iml" filepath="$PROJECT_DIR$/.idea/sugoi-H.iml" />
     </modules>
   </component>
 </project>
