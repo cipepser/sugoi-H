@@ -8,6 +8,7 @@ dispatch :: String -> [String] -> IO ()
 dispatch "add" = add
 dispatch "view" = view
 dispatch "remove" = remove
+dispatch command = doesntExist command
 
 add :: [String] -> IO ()
 add [fileName, todoItem] = appendFile fileName (todoItem ++ "\n")
@@ -38,6 +39,8 @@ remove [fileName, numberString] = do
             removeFile fileName
             renameFile tempName fileName)
 
+doesntExist :: String -> [String] -> IO ()
+doesntExist command _ = putStrLn $ "The " ++ command ++ " command doesn't exist"
 
 main = do
     (command:argList) <- getArgs
