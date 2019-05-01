@@ -12,6 +12,7 @@ dispatch command = doesntExist command
 
 add :: [String] -> IO ()
 add [fileName, todoItem] = appendFile fileName (todoItem ++ "\n")
+add _ = putStrLn "The add command takes exactly two argments"
 
 view :: [String] -> IO ()
 view [fileName] = do
