@@ -15,3 +15,11 @@ x -: f = f x
 
 banana :: Pole -> Maybe Pole
 banana _ = Nothing
+
+routine :: Maybe Pole
+routine = do
+    start  <- return (0, 0)
+    first  <- landLeft 2 start
+    -- Nothing
+    second <- landRight 2 first
+    landLeft 1 second
