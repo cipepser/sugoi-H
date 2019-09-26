@@ -17,3 +17,7 @@ in3 start = do
 
 canReachIn3 :: KnightPos -> KnightPos -> Bool
 canReachIn3 start end = end `elem` in3 start
+
+nextPath :: [Path] -> [Path]
+nextPath prev | [] = []
+              | ps = tail ps $ moveKnight
