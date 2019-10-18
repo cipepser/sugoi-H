@@ -1,4 +1,3 @@
-import Control.Monad
 import Control.Monad.Writer
 
 keepSmall :: Int -> Writer [String] Bool
